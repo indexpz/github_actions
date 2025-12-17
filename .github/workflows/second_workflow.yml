@@ -1,0 +1,27 @@
+name: Second Workflow
+
+on: push
+
+jobs:
+    run-first-command:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Wyświetl Wersję Node na Linux
+              run: |
+                node -v
+    run-parallel-command:
+        runs-on: windows-latest
+        steps:
+            - name: Wyświetl Wersję Node na Windows
+              run: |
+                node -v
+    run-second-commad:
+        runs-on: macos-latest
+        # needs: [run-first-command, run-parallel-command]
+        needs: run-first-command
+        steps:
+            - name: Wyświetl Wersję Node na MacOS
+              run: |
+                node -v
+        
+            

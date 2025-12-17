@@ -1,7 +1,8 @@
 name: First Workflow
 
 # on: [push]
-on: workflow_dispatch
+# on: workflow_dispatch
+on: push
 
 jobs:
     run-first-command:
