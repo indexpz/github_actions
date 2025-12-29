@@ -15,7 +15,7 @@ jobs:
               run: |
                 git init
                 git remote add origin https://@GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
-                git fech origin
+                git fetch origin
                 git checkout main
             - name: Wylistuj zawartosc katalogu roboczego  po skopiowaniu repozytorium 
               run: ls -a
