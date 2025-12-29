@@ -14,8 +14,8 @@ jobs:
             - name: Koppiuj pliki
               run: |
                 git init
-                git remote add origin https://@GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
+                git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
                 git fetch origin
-                git checkout master
+                git checkout main   
             - name: Wylistuj zawartosc katalogu roboczego  po skopiowaniu repozytorium 
               run: ls -a
